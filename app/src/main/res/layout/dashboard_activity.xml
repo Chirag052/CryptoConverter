@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_background_gradient">
+
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_20"
+        android:fontFamily="@font/pacifico"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_30"
+         />
+
+    <FrameLayout
+        android:id="@+id/res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appname"
+        android:layout_centerInParent="true"
+        android:elevation="@dimen/margin_40"
+        android:clipToPadding="true"
+        android:background="@drawable/back_capsule"
+        android:layout_marginTop="@dimen/margin_150">
+        <TextView
+            android:layout_width="@dimen/margin_250"
+            android:layout_height="@dimen/margin_100"
+            android:layout_gravity="center"
+            android:background="@drawable/back_capsule"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="@dimen/margin_250"
+            android:layout_height="@dimen/margin_80"
+            android:layout_gravity="center"
+            android:background="@drawable/front_capsule"
+            android:clipToPadding="true"
+            android:elevation="@dimen/margin_20"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/dot"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/convertText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_10"
+            android:layout_gravity="center"
+            android:elevation="@dimen/margin_50"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_marginTop="@dimen/margin_28"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/pickers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/res"
+        android:layout_marginTop="@dimen/margin_90">
+    <NumberPicker
+        android:id="@+id/number_picker_crypto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_80"
+
+         />
+    <NumberPicker
+        android:id="@+id/number_picker_curr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+
+
+        />
+    </LinearLayout>
+</RelativeLayout>
